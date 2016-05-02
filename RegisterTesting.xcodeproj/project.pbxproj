@@ -15,6 +15,10 @@
 		A320010C1CD70F0100ED9A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A320010A1CD70F0100ED9A8C /* LaunchScreen.storyboard */; };
 		A32001171CD70F0100ED9A8C /* RegisterTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32001161CD70F0100ED9A8C /* RegisterTestingTests.swift */; };
 		A32001221CD70F0100ED9A8C /* RegisterTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32001211CD70F0100ED9A8C /* RegisterTestingUITests.swift */; };
+		A3976A321CD72085002DADFA /* Kumulos_ARMv7-Combined.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3976A2E1CD72085002DADFA /* Kumulos_ARMv7-Combined.a */; };
+		A3976A331CD72085002DADFA /* Kumulos.m in Sources */ = {isa = PBXBuildFile; fileRef = A3976A301CD72085002DADFA /* Kumulos.m */; };
+		A3976A351CD720A1002DADFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3976A341CD720A1002DADFA /* SystemConfiguration.framework */; };
+		A3976A371CD720BA002DADFA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3976A361CD720BA002DADFA /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,13 @@
 		A320011D1CD70F0100ED9A8C /* RegisterTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegisterTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32001211CD70F0100ED9A8C /* RegisterTestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTestingUITests.swift; sourceTree = "<group>"; };
 		A32001231CD70F0100ED9A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3976A2D1CD72084002DADFA /* RegisterTesting-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RegisterTesting-Bridging-Header.h"; sourceTree = "<group>"; };
+		A3976A2E1CD72085002DADFA /* Kumulos_ARMv7-Combined.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "Kumulos_ARMv7-Combined.a"; sourceTree = "<group>"; };
+		A3976A2F1CD72085002DADFA /* Kumulos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kumulos.h; sourceTree = "<group>"; };
+		A3976A301CD72085002DADFA /* Kumulos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kumulos.m; sourceTree = "<group>"; };
+		A3976A311CD72085002DADFA /* libKumulos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libKumulos.h; sourceTree = "<group>"; };
+		A3976A341CD720A1002DADFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A3976A361CD720BA002DADFA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CABE84395E4B78EFD7618E82 /* Pods-RegisterTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-RegisterTesting/Pods-RegisterTesting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3976A371CD720BA002DADFA /* MobileCoreServices.framework in Frameworks */,
+				A3976A351CD720A1002DADFA /* SystemConfiguration.framework in Frameworks */,
 				9FBBD80F133AB4086272E8A2 /* Pods_RegisterTesting.framework in Frameworks */,
+				A3976A321CD72085002DADFA /* Kumulos_ARMv7-Combined.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,7 @@
 		A32000F51CD70F0100ED9A8C = {
 			isa = PBXGroup;
 			children = (
+				A3976A2C1CD71FD2002DADFA /* KumulosAPI */,
 				A32001001CD70F0100ED9A8C /* RegisterTesting */,
 				A32001151CD70F0100ED9A8C /* RegisterTestingTests */,
 				A32001201CD70F0100ED9A8C /* RegisterTestingUITests */,
@@ -132,6 +147,18 @@
 			path = RegisterTestingUITests;
 			sourceTree = "<group>";
 		};
+		A3976A2C1CD71FD2002DADFA /* KumulosAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A3976A2E1CD72085002DADFA /* Kumulos_ARMv7-Combined.a */,
+				A3976A2F1CD72085002DADFA /* Kumulos.h */,
+				A3976A301CD72085002DADFA /* Kumulos.m */,
+				A3976A311CD72085002DADFA /* libKumulos.h */,
+				A3976A2D1CD72084002DADFA /* RegisterTesting-Bridging-Header.h */,
+			);
+			name = KumulosAPI;
+			sourceTree = "<group>";
+		};
 		A796188AB7D4209C113578FD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +171,8 @@
 		FA1E713942C982E89B564985 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3976A361CD720BA002DADFA /* MobileCoreServices.framework */,
+				A3976A341CD720A1002DADFA /* SystemConfiguration.framework */,
 				058D61DE60EC83E3512661B1 /* Pods_RegisterTesting.framework */,
 			);
 			name = Frameworks;
@@ -332,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A32001041CD70F0100ED9A8C /* ViewController.swift in Sources */,
+				A3976A331CD72085002DADFA /* Kumulos.m in Sources */,
 				A32001021CD70F0100ED9A8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,10 +505,17 @@
 			baseConfigurationReference = 5BC36E2D912D91CC1D1694E8 /* Pods-RegisterTesting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RegisterTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kitsana.RegisterTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RegisterTesting-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -487,10 +524,16 @@
 			baseConfigurationReference = CABE84395E4B78EFD7618E82 /* Pods-RegisterTesting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RegisterTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kitsana.RegisterTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RegisterTesting-Bridging-Header.h";
 			};
 			name = Release;
 		};
